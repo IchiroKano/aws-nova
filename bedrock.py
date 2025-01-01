@@ -2,7 +2,7 @@ import boto3
 import json
 from botocore.exceptions import ClientError
 
-# Bedrock runtime client の作成, Nova Lite モデルを使う。バージニア北部リージョンで利用可能
+# Bedrock runtime client の作成, Nova Lite モデルを使う。バージニア北部リージョンで利用可能 
 bedrock_runtime = boto3.client("bedrock-runtime", region_name="us-east-1")
 model_id = "amazon.nova-lite-v1:0"
 
