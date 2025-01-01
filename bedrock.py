@@ -40,18 +40,6 @@ try:
     generated_text = response_body['output']['message']['content'][0]['text']
     print(generated_text)
 
-    # レスポンス全体を出力してデバッグ
-    #response_body = json.loads(response['body'].read())
-    #print("\nResponse Body:")
-    #print(json.dumps(response_body, indent=4))  # 整形して表示
-
-    # generated_text の取得と表示
-    #if 'output' in response_body:
-    #    generated_text = response_body['output']['message']['content'][0]['text']
-    #    print(generated_text)
-    #else:
-    #    print("\nERROR: 'output' キーがレスポンスに含まれていません。")
-
 except (ClientError, Exception) as e:
     print(f"ERROR: 実行できません '{model_id}', Reason: {e}")
     exit(1)
